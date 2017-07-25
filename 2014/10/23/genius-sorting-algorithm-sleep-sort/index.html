@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="天才排序算法：睡眠排序">
+<meta name="keywords" content="golang,joy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Genius sorting algorithm: Sleep sort(译)">
+<meta property="og:url" content="http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/index.html">
+<meta property="og:site_name" content="Charlie">
+<meta property="og:description" content="天才排序算法：睡眠排序">
+<meta property="og:updated_time" content="2017-07-25T03:51:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Genius sorting algorithm: Sleep sort(译)">
+<meta name="twitter:description" content="天才排序算法：睡眠排序">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Genius sorting algorithm: Sleep sort(译)</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2014/10/25/information-is-power/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2014/06/07/bash-command-line-options/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&text=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&is_video=false&description=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Genius sorting algorithm: Sleep sort(译)&body=Check out this article: http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&name=Genius sorting algorithm: Sleep sort(译)&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Go"><span class="toc-number">1.</span> <span class="toc-text">Go</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP"><span class="toc-number">2.</span> <span class="toc-text">PHP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#javascript"><span class="toc-number">3.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ruby"><span class="toc-number">4.</span> <span class="toc-text">Ruby</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#该贴有1000-回复，我挑几个有趣的回复分享下："><span class="toc-number">4.1.</span> <span class="toc-text">该贴有1000+回复，我挑几个有趣的回复分享下：</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Genius sorting algorithm: Sleep sort(译)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Charlie</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2014-10-22T16:00:00.000Z" itemprop="datePublished">2014-10-23</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/golang/">golang</a>, <a class="tag-link" href="/tags/joy/">joy</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>今天看到一个帖子，帖名叫《Genius sorting algorithm: Sleep sort》。看过之后感觉虽然实用价值不高，但挺受启发的，重点是它实在是太欢乐了。</p>
+<p>楼主：</p>
+<p>Man, am I a genius. Check out this sorting algorithm I just invented.<br>朋友，我真是个天才，快来看看我刚发明的排序算法。</p>
+<p>#!/bin/bash<br>function f() {<br>    sleep “$1”<br>    echo “$1”<br>}<br>while [ -n “$1” ]<br>do<br>    f “$1” &amp;<br>    shift<br>done<br>wait</p>
+<p>example usage:<br>./sleepsort.bash 5 3 6 3 6 3 1 4 7</p>
+<h4 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h4><p>package main</p>
+<p>import (<br>    “fmt”<br>    “time”<br>)</p>
+<p>var flag bool<br>var container chan bool<br>var count int </p>
+<p>func main() {<br>    flag = true<br>    container = make(chan bool, 7)<br>    var arrays []int = []int{25, 12, 36, 24, 96, 54, 28}<br>    var i int<br>    for i = 0; i &lt; len(arrays); i++ {<br>        go tosleep(arrays[i])<br>    }<br>    go listen(len(arrays))<br>    for flag {<br>        time.Sleep(1e9)<br>    }</p>
+<p>}<br>func listen(size int) {<br>    for flag {<br>        select {<br>        case &lt;-container:<br>            count++<br>            if count &gt;= size {<br>                flag = false<br>                break<br>            }<br>        }<br>    }<br>}<br>func tosleep(data int) {<br>    time.Sleep(time.Duration(data))<br>    fmt.Println(data)<br>    container &lt;- true<br>}</p>
+<h4 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h4><p>&lt;?php<br>$pids = array();<br>for ($i=1; $i&lt;$argc; $i++)<br>{<br>        if (($pid = pcntl_fork()) == 0)<br>        {<br>                $sleep = intval($argv[$i]);<br>                sleep($sleep);<br>                echo $sleep.”\n”;<br>                exit();<br>        }<br>        else if ($pid == -1)<br>        {<br>                die();<br>        }<br>        else<br>        {<br>                $pids[] = $pid;<br>        }<br>}  </p>
+<p>foreach($pids as $pid)<br>        pcntl_waitpid($pid, $status);<br>?&gt;  </p>
+<p>php sleepsort.php 1 3 5 6 2  </p>
+<h4 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h4><p>// Javascript  </p>
+<p>function lazySort(list, callback) {<br>    var result = [];<br>    list.forEach(function(i) {<br>        setTimeout(function() {<br>            result.push(i);<br>            if(result.length == list.length) {<br>                callback(result);<br>            }<br>        }, i);<br>    });<br>}  </p>
+<p>lazySort([4,5,7,1,2,4,5], alert);  </p>
+<h4 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h4><p>ARGV.each { |e| fork { sleep(e.to_f/1000); puts e } }  </p>
+<hr>
+<h5 id="该贴有1000-回复，我挑几个有趣的回复分享下："><a href="#该贴有1000-回复，我挑几个有趣的回复分享下：" class="headerlink" title="该贴有1000+回复，我挑几个有趣的回复分享下："></a>该贴有1000+回复，我挑几个有趣的回复分享下：</h5><p>路人A：</p>
+<blockquote>
+<p>Oh god, it works.</p>
+<p>But I don’t like to wait 218382 seconds to sort ‘(0 218382)</p>
+</blockquote>
+<p>哦，春哥，它居然能用，但我不想用218382秒去排(0 218382)</p>
+<p>路人B：</p>
+<blockquote>
+<p>If the difference between any two of the numbers is too small, race conditions will fuck you up the ass.</p>
+</blockquote>
+<p>如果两个数之间的差距太小，竞态条件就要爆你菊花了。</p>
+<p>路人C：</p>
+<blockquote>
+<p>What about<br>./sleepsort -1 -2 -3 ?</p>
+<p>If you slept exp(n) instead of n it could easily include negative integers too!</p>
+</blockquote>
+<p>排-1 -2 -3怎么办？如果你睡exp(n)而不是n，它就能包含负数了。</p>
+<p>路人D：</p>
+<blockquote>
+<p>Someone email this to Knuth</p>
+</blockquote>
+<p>你可以给Knuth发邮件了</p>
+<p>路人E：</p>
+<blockquote>
+<p>I think thats brilliant :)</p>
+<p>Would be fun to design a hardware sorter, based on this..</p>
+</blockquote>
+<p>这招挺高，可以根据这个设计一个硬件排序器</p>
+<p>路人F：</p>
+<blockquote>
+<p>This has a best case O(n) and an infinity high worst case. (because its 0(n * Constant) and the constant could be much greater than n)</p>
+</blockquote>
+<p>它有一个最好的O(n)的时间复杂度和一个无穷大的最坏复杂度，因为这个常数可能比n大的多的多</p>
+<p>路人G：</p>
+<blockquote>
+<p>I heartily disagree with all the attempts to downplay the brilliance of the sleep sort algorithm. Many of you have missed the important point that while traditional sorting algorithms can only utilize one core, sleep sort has the capacity to use the full power of a massively parallel execution environment.<br>Given that you need nearly no computing in each of the threads, you can implement them using low-power CPUs, so this is in fact a GREEN COMPUTING algorithm.<br>Oh, and did I mention that the algorithm can also run inside a cloud…?<br>Sure, you’re a genius!</p>
+</blockquote>
+<p>我由衷的不同意那些低估sleepsort这个天才算法的举动，许多人可能忽略了一个重点那就是传统的排序只能利用一个核心，而sleepsort有这个能力充分利用可以做大量并行计算的环境。</p>
+<p>在每个线程中给出你几乎不需要计算的部分，你可以用低性能CPU搞定它们，所以事实上，这是一个“绿色计算”算法。</p>
+<p>还有我提到的这个方法能在云端运行不？</p>
+<p>总之，你是个天才！</p>
+<p>路人H：</p>
+<p>pretty fucking cool !</p>
+<p>真是太TM的cool了！</p>
+<p>原帖地址：<a href="http://dis.4chan.org/read/prog/1295544154" target="_blank" rel="external">http://dis.4chan.org/read/prog/1295544154</a></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Go"><span class="toc-number">1.</span> <span class="toc-text">Go</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP"><span class="toc-number">2.</span> <span class="toc-text">PHP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#javascript"><span class="toc-number">3.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ruby"><span class="toc-number">4.</span> <span class="toc-text">Ruby</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#该贴有1000-回复，我挑几个有趣的回复分享下："><span class="toc-number">4.1.</span> <span class="toc-text">该贴有1000+回复，我挑几个有趣的回复分享下：</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&text=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&is_video=false&description=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Genius sorting algorithm: Sleep sort(译)&body=Check out this article: http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&title=Genius sorting algorithm: Sleep sort(译)"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2014/10/23/genius-sorting-algorithm-sleep-sort/&name=Genius sorting algorithm: Sleep sort(译)&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Charlie
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

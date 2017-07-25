@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="CPU Summary    Avg. Frequency:    2.559 GHz     Package Power::    Pkg: 4.46W, CPU 2.34W, GPU: 0.44W Pkg Interrupt Rate:    Total: 2401Hz   ARPT: 41Hz   HDEF: 1Hz   IGPU: 520Hz   IPI: 1304Hz   MacBook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WOW MY MACHINE SUMMARY .">
+<meta property="og:url" content="http://xyhp915.github.io/2016/03/25/system-stat/index.html">
+<meta property="og:site_name" content="Charlie">
+<meta property="og:description" content="CPU Summary    Avg. Frequency:    2.559 GHz     Package Power::    Pkg: 4.46W, CPU 2.34W, GPU: 0.44W Pkg Interrupt Rate:    Total: 2401Hz   ARPT: 41Hz   HDEF: 1Hz   IGPU: 520Hz   IPI: 1304Hz   MacBook">
+<meta property="og:updated_time" content="2017-07-25T03:44:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WOW MY MACHINE SUMMARY .">
+<meta name="twitter:description" content="CPU Summary    Avg. Frequency:    2.559 GHz     Package Power::    Pkg: 4.46W, CPU 2.34W, GPU: 0.44W Pkg Interrupt Rate:    Total: 2401Hz   ARPT: 41Hz   HDEF: 1Hz   IGPU: 520Hz   IPI: 1304Hz   MacBook">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>WOW MY MACHINE SUMMARY .</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/03/31/phalcon-cache-view-not-work/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/10/13/cache-object-without-using-serialize-/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2016/03/25/system-stat/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2016/03/25/system-stat/&text=WOW MY MACHINE SUMMARY ."><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2016/03/25/system-stat/&is_video=false&description=WOW MY MACHINE SUMMARY ."><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=WOW MY MACHINE SUMMARY .&body=Check out this article: http://xyhp915.github.io/2016/03/25/system-stat/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2016/03/25/system-stat/&name=WOW MY MACHINE SUMMARY .&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CPU-Summary"><span class="toc-number">1.</span> <span class="toc-text">CPU Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Thermal-Summary"><span class="toc-number">2.</span> <span class="toc-text">Thermal Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fan-Summary"><span class="toc-number">3.</span> <span class="toc-text">Fan Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#I-O-Summary"><span class="toc-number">4.</span> <span class="toc-text">I/O Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-I-O-Activity"><span class="toc-number">5.</span> <span class="toc-text">Ranked I/O Activity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Airport-Summary"><span class="toc-number">6.</span> <span class="toc-text">Airport Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory-Summary"><span class="toc-number">7.</span> <span class="toc-text">Memory Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-Memory-Activity"><span class="toc-number">8.</span> <span class="toc-text">Ranked Memory Activity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory-Pressure-Summary"><span class="toc-number">9.</span> <span class="toc-text">Memory Pressure Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Apps-amp-Daemons-grouped-by-coalition"><span class="toc-number">10.</span> <span class="toc-text">Apps & Daemons (grouped by coalition)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-Battery-Usage"><span class="toc-number">11.</span> <span class="toc-text">Ranked Battery Usage</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-CPU-Activity"><span class="toc-number">12.</span> <span class="toc-text">Ranked CPU Activity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Devices-Dashboard"><span class="toc-number">13.</span> <span class="toc-text">Devices Dashboard</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        WOW MY MACHINE SUMMARY .
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Charlie</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-03-24T16:00:00.000Z" itemprop="datePublished">2016-03-25</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="CPU-Summary"><a href="#CPU-Summary" class="headerlink" title="CPU Summary"></a>CPU Summary</h1><pre><code>    Avg. Frequency:    2.559 GHz
+    Package Power::    Pkg: 4.46W, CPU 2.34W, GPU: 0.44W
+Pkg Interrupt Rate:    Total: 2401Hz   ARPT: 41Hz   HDEF: 1Hz   IGPU: 520Hz   IPI: 1304Hz   MacBookPro12,1: 2Hz   SMC: 1Hz   TMR: 498Hz   XHC1: 35Hz
+   Pkg C-State Res:    Total: 70.1%   C2: 33%   C3: 12%   C6: 8%   C7: 16%   C8: 2%   C10: 0%
+ Cores C-State Res:       C3: 0%   C6: 0%   C7: 79%
+   GPU C-State Res:       RC1: 1%   RC6: 87%
+     XCPM Tier Res:       TT5: 0%   background: 1%   idle: 88%   normal: 11%   rt_short: 0%
+               A/C:    75.1%
+       User Active:    74.9%
+         User Idle:    87.1%
+           Battery:    57.8%
+       User Active:    57.8%
+</code></pre><h1 id="Thermal-Summary"><a href="#Thermal-Summary" class="headerlink" title="Thermal Summary"></a>Thermal Summary</h1><pre><code>        Total samples:    534
+Pressure Distribution:    nominal: 507, moderate: 27
+CPU TLVL Distribution:    [MIN,1): 493, [1,26): 6, [26,51): 5, [51,101): 30, [101,151): 0, [151,201): 0, [201,MAX): 0
+GPU TLVL Distribution:    [MIN,1): 534, [1,26): 0, [26,51): 0, [51,101): 0, [101,151): 0, [151,201): 0, [201,MAX): 0
+IO  TLVL Distribution:    [MIN,1): 504, [1,26): 30, [26,51): 0, [51,101): 0, [101,151): 0, [151,201): 0, [201,MAX): 0
+</code></pre><h1 id="Fan-Summary"><a href="#Fan-Summary" class="headerlink" title="Fan Summary"></a>Fan Summary</h1><pre><code>    Total samples:    552
+     High samples:    0
+Very high samples:    0
+</code></pre><h1 id="I-O-Summary"><a href="#I-O-Summary" class="headerlink" title="I/O Summary"></a>I/O Summary</h1><pre><code>      Disk Reads:    381178 (12/s)
+     Disk Writes:    254470 (8/s)
+      Bytes Read:        9144.0 MB (     291.3 KB/s)
+   Bytes Written:        9992.7 MB (     318.3 KB/s)
+
+    Packets Sent:    575535 (18/s)
+Packets Received:    441709 (14/s)
+      Bytes Sent:         594.7 MB (      18.9 KB/s)
+  Bytes Received:          50.5 MB (       1.6 KB/s)
+</code></pre><h1 id="Ranked-I-O-Activity"><a href="#Ranked-I-O-Activity" class="headerlink" title="Ranked I/O Activity"></a>Ranked I/O Activity</h1><pre><code>            Time:    2016-03-24 23:30:36 to 2016-03-25 10:24:19 (10:53:42)
+      Disk Reads:    47304 (124/s)
+     Disk Writes:    11324 (30/s)
+      Bytes Read:        2382.1 MB (       6.2 MB/s)
+   Bytes Written:        1865.7 MB (       4.9 MB/s)
+
+    Packets Sent:    1601 (4/s)
+Packets Received:    2267 (6/s)
+      Bytes Sent:         507.1 KB (       1.3 KB/s)
+  Bytes Received:         290.2 KB (       0.8 KB/s)
+       Breakdown:                    DISK READS                LOGICAL WRITES
+                 12.5 MB (      32.0 MB/s)           0.0 KB (       0.0 KB/s)    com.apple.xpc.launchd.oneshot.activateSettings
+                221.3 MB (       6.2 MB/s)           4.8 MB (     139.0 KB/s)    com.jetbrains.PhpStorm
+                 47.5 MB (       3.3 MB/s)           1.3 MB (      91.3 KB/s)    com.jetbrains.WebStorm
+                441.1 MB (       1.2 MB/s)           4.2 MB (      11.2 KB/s)    com.google.Chrome
+                  2.1 MB (     539.1 KB/s)         431.4 KB (     108.0 KB/s)    com.adobe.PDApp.AAMUpdatesNotifier
+
+            Time:    2016-03-25 13:46:09 to 2016-03-25 13:56:10 (00:10:00)
+      Disk Reads:    64721 (109/s)
+     Disk Writes:    17474 (29/s)
+      Bytes Read:        1008.0 MB (       1.7 MB/s)
+   Bytes Written:        1831.5 MB (       3.1 MB/s)
+
+    Packets Sent:    47711 (80/s)
+Packets Received:    31709 (53/s)
+      Bytes Sent:          64.5 MB (     111.0 KB/s)
+  Bytes Received:           2.5 MB (       4.4 KB/s)
+       Breakdown:                    DISK READS                LOGICAL WRITES
+                553.0 MB (     952.0 KB/s)         912.6 MB (       1.5 MB/s)    com.apple.systemstatsd
+                119.2 MB (     205.3 KB/s)         214.7 MB (     369.5 KB/s)    com.kapeli.dashdoc
+                 36.6 MB (      63.0 KB/s)         195.3 MB (     336.2 KB/s)    com.jetbrains.WebStorm
+                 36.3 MB (     288.9 KB/s)           4.9 MB (      39.2 KB/s)    com.apple.Safari
+                  1.2 MB (       2.1 KB/s)          29.4 MB (      50.6 KB/s)    com.jetbrains.PhpStorm
+
+            Time:    2016-03-25 13:56:10 to 2016-03-25 14:06:10 (00:09:59)
+      Disk Reads:    15421 (26/s)
+     Disk Writes:    11039 (18/s)
+      Bytes Read:         313.8 MB (     535.6 KB/s)
+   Bytes Written:         325.3 MB (     555.2 KB/s)
+
+    Packets Sent:    58474 (97/s)
+Packets Received:    57930 (97/s)
+      Bytes Sent:          75.5 MB (     128.9 KB/s)
+  Bytes Received:           5.0 MB (       8.5 KB/s)
+       Breakdown:                    DISK READS                LOGICAL WRITES
+                108.6 MB (     185.3 KB/s)          93.1 MB (     158.8 KB/s)    com.google.Chrome
+                 24.4 MB (      41.6 KB/s)         120.4 MB (     205.5 KB/s)    com.jetbrains.WebStorm
+                  4.0 KB (       0.0 KB/s)          40.6 MB (      69.4 KB/s)    com.apple.coresymbolicationd
+                  4.0 MB (       6.9 KB/s)          29.3 MB (      50.1 KB/s)    com.jetbrains.PhpStorm
+                  3.3 MB (       5.7 KB/s)          23.6 MB (      40.2 KB/s)    com.apple.system
+</code></pre><h1 id="Airport-Summary"><a href="#Airport-Summary" class="headerlink" title="Airport Summary"></a>Airport Summary</h1><pre><code>   Total Duration:       32142.7 s
+
+   awdl0_rx_bytes:           0.0 KB (       0.0 KB/s)
+   awdl0_tx_bytes:           0.0 KB (       0.0 KB/s)
+awdl0_be_tx_bytes:           0.0 KB (       0.0 KB/s)
+awdl0_bk_tx_bytes:           0.0 KB (       0.0 KB/s)
+awdl0_vi_tx_bytes:           0.0 KB (       0.0 KB/s)
+awdl0_vo_tx_bytes:           0.0 KB (       0.0 KB/s)
+      en_rx_bytes:         595.2 MB (      19.0 KB/s)
+      en_tx_bytes:          71.2 MB (       2.3 KB/s)
+   en_be_tx_bytes:          60.8 MB (       1.9 KB/s)
+   en_bk_tx_bytes:           9.3 MB (       0.3 KB/s)
+   en_vi_tx_bytes:           0.0 KB (       0.0 KB/s)
+   en_vo_tx_bytes:           1.1 MB (       0.0 KB/s)
+</code></pre><p>   phy_scan_user_scan_dur:          87.6 s  (       0.3%)<br>phy_activity_radio_tx_dur:          64.1 s  (       0.2%)<br>phy_activity_radio_rx_dur:        3578.7 s  (      11.1%)<br>        awdl_radio_tx_dur:           0.0 s  (       0.0%)<br>        awdl_radio_rx_dur:           0.0 s  (       0.0%)<br>              awdl_aw_dur:           0.0 s  (       0.0%)<br>           awdl_pscan_dur:           0.0 s  (       0.0%)</p>
+<p> phy_scan_user_scan_count:         388.4    (       0.0Hz)</p>
+<h1 id="Memory-Summary"><a href="#Memory-Summary" class="headerlink" title="Memory Summary"></a>Memory Summary</h1><pre><code>        Swap Dev:    SSD
+           Total:        8192.0 MB
+            Free:         291.6 MB
+           Wired:        1811.7 MB
+      Compressor:         985.6 MB
+      Compressed:        2356.4 MB
+       Purgeable:         154.3 MB
+        Internal:        3270.7 MB
+        External:        1830.3 MB
+
+ IOAccelResident:           0.0 KB
+    IOAccelWired:           0.0 KB
+    IOAccelDirty:           0.0 KB
+   IOAccelCached:           0.0 KB
+IOAccelPurgeable:           0.0 KB
+
+          Faults:      69667660
+          Purges:        392310 (      48.8 KB/s)
+      Zero-fills:      40306732 (       4.9 MB/s)
+   Reactivations:       3504908 (     436.2 KB/s)
+        Page-ins:       1980404 (     246.5 KB/s)
+       Page-outs:         12675 (       1.6 KB/s)
+  Decompressions:       2334482 (     290.5 KB/s)
+    Compressions:       4405599 (     548.3 KB/s)
+        Swap-ins:        528336 (      65.7 KB/s)
+       Swap-outs:        593123 (      73.8 KB/s)
+</code></pre><h1 id="Ranked-Memory-Activity"><a href="#Ranked-Memory-Activity" class="headerlink" title="Ranked Memory Activity"></a>Ranked Memory Activity</h1><pre><code>            Time:    2016-03-25 13:56:10 to 2016-03-25 14:06:10 (00:09:59)
+            Free:          63.3 MB
+           Wired:        2003.8 MB
+      Compressor:        1535.0 MB
+      Compressed:        4104.0 MB
+       Purgeable:         119.0 MB
+        Internal:        3351.2 MB
+        External:        1237.2 MB
+
+ IOAccelResident:           0.0 KB
+    IOAccelWired:           0.0 KB
+    IOAccelDirty:           0.0 KB
+   IOAccelCached:           0.0 KB
+IOAccelPurgeable:           0.0 KB
+
+          Faults:       2737429
+          Purges:          5907 (      39.4 KB/s)
+      Zero-fills:       1510726 (       9.8 MB/s)
+   Reactivations:        422197 (       2.7 MB/s)
+        Page-ins:         49909 (     332.7 KB/s)
+       Page-outs:           548 (       3.7 KB/s)
+  Decompressions:        178516 (       1.2 MB/s)
+    Compressions:        489843 (       3.2 MB/s)
+        Swap-ins:         30075 (     200.5 KB/s)
+       Swap-outs:             0 (       0.0 KB/s)
+       Breakdown:              MEM          CMPRS            Purge            Wire
+               2045.4 MB        1240.5 MB         208.0 KB           0.0 KB    com.google.Chrome
+               1130.1 MB         264.1 MB          40.0 KB           0.0 KB    com.jetbrains.WebStorm
+               1108.4 MB           6.1 MB           0.0 KB           0.0 KB    com.apple.system
+                830.9 MB         286.7 MB           0.0 KB           0.0 KB    com.jetbrains.PhpStorm
+                342.5 MB         300.5 MB           0.0 KB           0.0 KB    com.adobe.Photoshop
+
+            Time:    2016-03-25 15:56:10 to 2016-03-25 16:06:10 (00:10:00)
+            Free:          86.9 MB
+           Wired:        1954.5 MB
+      Compressor:        1939.1 MB
+      Compressed:        4552.1 MB
+       Purgeable:         155.8 MB
+        Internal:        2945.3 MB
+        External:        1263.7 MB
+
+ IOAccelResident:           0.0 KB
+    IOAccelWired:           0.0 KB
+    IOAccelDirty:           0.0 KB
+   IOAccelCached:           0.0 KB
+IOAccelPurgeable:           0.0 KB
+
+          Faults:       2152223
+          Purges:         39953 (     266.4 KB/s)
+      Zero-fills:       1022909 (       6.7 MB/s)
+   Reactivations:        255701 (       1.7 MB/s)
+        Page-ins:         12408 (      82.7 KB/s)
+       Page-outs:           297 (       2.0 KB/s)
+  Decompressions:         97903 (     652.7 KB/s)
+    Compressions:        234701 (       1.5 MB/s)
+        Swap-ins:           512 (       3.4 KB/s)
+       Swap-outs:             0 (       0.0 KB/s)
+       Breakdown:              MEM          CMPRS            Purge            Wire
+               1896.1 MB        1218.6 MB           3.5 MB           0.0 KB    com.google.Chrome
+               1177.3 MB         183.6 MB           1.1 MB           0.0 KB    com.jetbrains.WebStorm
+               1100.9 MB           8.4 MB           0.0 KB           0.0 KB    com.apple.system
+                868.0 MB         253.7 MB          16.0 KB           0.0 KB    com.jetbrains.PhpStorm
+                354.6 MB         323.6 MB           0.0 KB           0.0 KB    com.adobe.Photoshop
+
+            Time:    2016-03-25 15:46:10 to 2016-03-25 15:56:10 (00:10:00)
+            Free:          62.6 MB
+           Wired:        1964.8 MB
+      Compressor:        1697.2 MB
+      Compressed:        4179.1 MB
+       Purgeable:         155.3 MB
+        Internal:        3207.7 MB
+        External:        1257.8 MB
+
+ IOAccelResident:           0.0 KB
+    IOAccelWired:           0.0 KB
+    IOAccelDirty:           0.0 KB
+   IOAccelCached:           0.0 KB
+IOAccelPurgeable:           0.0 KB
+
+          Faults:       1886694
+          Purges:         14285 (      95.2 KB/s)
+      Zero-fills:       1250389 (       8.1 MB/s)
+   Reactivations:        174731 (       1.1 MB/s)
+        Page-ins:         13629 (      90.9 KB/s)
+       Page-outs:           160 (       1.1 KB/s)
+  Decompressions:        112505 (     750.0 KB/s)
+    Compressions:        220530 (       1.4 MB/s)
+        Swap-ins:            63 (       0.4 KB/s)
+       Swap-outs:             0 (       0.0 KB/s)
+       Breakdown:              MEM          CMPRS            Purge            Wire
+               1843.4 MB         914.7 MB          60.0 KB           0.0 KB    com.google.Chrome
+               1173.9 MB         163.8 MB           1.3 MB           0.0 KB    com.jetbrains.WebStorm
+               1097.6 MB           8.2 MB           0.0 KB           0.0 KB    com.apple.system
+                864.0 MB         284.5 MB         784.1 KB           0.0 KB    com.jetbrains.PhpStorm
+                352.1 MB         310.8 MB           0.0 KB           0.0 KB    com.adobe.Photoshop
+</code></pre><h1 id="Memory-Pressure-Summary"><a href="#Memory-Pressure-Summary" class="headerlink" title="Memory Pressure Summary"></a>Memory Pressure Summary</h1><pre><code>Normal Sample Counts:    522
+</code></pre><h1 id="Apps-amp-Daemons-grouped-by-coalition"><a href="#Apps-amp-Daemons-grouped-by-coalition" class="headerlink" title="Apps &amp; Daemons (grouped by coalition)"></a>Apps &amp; Daemons (grouped by coalition)</h1><p>Ranked by CPU &amp; Energy Impact:<br>00:14:24    2.7 %        54669351.06        com.apple.WindowServer<br>01:47:17    20.0 %        25770275.81        com.google.Chrome<br>00:41:05    7.7 %        2957555.18        com.jetbrains.WebStorm<br>00:15:56    3.0 %        1004317.58        com.jetbrains.PhpStorm<br>00:19:42    3.7 %        657337.23        com.apple.system<br>00:10:50    2.0 %        272987.67        org.niltsh.MPlayerX<br>00:02:59    0.6 %        59323.35        com.tencent.qq<br>00:04:36    0.9 %        51799.23        com.xunlei.Thunder<br>00:06:14    1.2 %        38570.08        com.apple.Spotlight<br>00:03:53    0.7 %        28094.12        com.apple.bluetoothaudiod</p>
+<p>Ranked by Interrupts / Idle Wakeups:<br>20233968 (629.5/sec)    5489971 wkups (170.8/sec)    com.apple.system<br>4042410 (125.8/sec)    2512470 wkups (78.2/sec)    com.jetbrains.WebStorm<br>2886533 (89.8/sec)     884953 wkups (27.5/sec)    com.google.Chrome<br>2838053 (88.3/sec)    2066225 wkups (64.3/sec)    com.tencent.qq<br>1859274 (57.8/sec)    1208256 wkups (37.6/sec)    com.xunlei.Thunder<br>1421737 (44.2/sec)    1153972 wkups (35.9/sec)    org.niltsh.MPlayerX<br> 694017 (21.6/sec)     350231 wkups (10.9/sec)    com.apple.WindowServer<br> 557660 (17.3/sec)     417235 wkups (13.0/sec)    com.apple.audio.coreaudiod<br> 390878 (12.2/sec)     207641 wkups (6.5/sec)    com.jetbrains.PhpStorm<br> 365978 (11.4/sec)     237707 wkups (7.4/sec)    com.apple.bluetoothaudiod</p>
+<p>Ranked by Process Launches (incl. XPC svcs. &amp; fork()):<br>   6362    com.googlecode.iterm2<br>   2541    com.kapeli.dashdoc<br>   1597    homebrew.mxcl.postgresql<br>   1366    com.jetbrains.WebStorm<br>   1355    com.jetbrains.PhpStorm<br>    458    com.google.Chrome<br>     96    com.apple.Spotlight<br>     65    com.apple.periodic-daily<br>     57    com.sogou.SogouServices<br>     45    com.apple.mDNSResponderHelper.reloaded</p>
+<p>Ranked by GPU:<br>30:56:19    346.51 %        com.apple.WindowServer<br>14:14:01    159.42 %        com.google.Chrome<br>01:30:29    16.89 %        com.jetbrains.WebStorm<br>00:30:45    5.74 %        com.jetbrains.PhpStorm<br>00:14:35    2.72 %        com.apple.system<br>00:06:16    1.17 %        org.niltsh.MPlayerX<br>00:00:02    0.01 %        com.adobe.Photoshop<br>00:00:00    0.00 %        com.adobe.AdobeCreativeCloud<br>00:00:00    0.00 %        com.kapeli.dashdoc<br>00:00:00    0.00 %        com.spotify.client</p>
+<h1 id="Ranked-Battery-Usage"><a href="#Ranked-Battery-Usage" class="headerlink" title="Ranked Battery Usage"></a>Ranked Battery Usage</h1><pre><code>              Time:    2016-03-24 21:44:36 to 2016-03-24 21:55:36 (00:11:00)
+             Power:    -30511 mW (-42.9 %/hr)
+    Avg. Frequency:    2.651 GHz
+    Package Power::    Pkg: 17.77W, CPU 10.15W, GPU: 4.95W
+Pkg Interrupt Rate:    Total: 6885Hz   ARPT: 98Hz   IGPU: 2095Hz   IPI: 3479Hz   MacBookPro12,1: 2Hz   SMC: 1Hz   TMR: 1111Hz   XHC1: 99Hz
+   Pkg C-State Res:    Total: 12.1%   C2: 6%   C3: 2%   C6: 2%   C7: 2%   C8: 0%   C10: 0%
+ Cores C-State Res:       C3: 1%   C6: 0%   C7: 36%
+   GPU C-State Res:       RC1: 4%   RC6: 52%
+     XCPM Tier Res:       TT5: 0%   background: 1%   idle: 54%   normal: 45%
+ Display Backlight:    46.0%
+Keyboard Backlight:    74.8%
+            PSR on:    0.1%
+  Process Intrpts.:    2064760
+          CPU Time:    00:20:09 (183.3%)
+               00:17:52 (162.5%)      449053    com.google.Chrome
+               00:00:46 (7.1%)      1397808    com.apple.system
+               00:00:35 (5.4%)      25728    com.apple.WindowServer
+               00:00:20 (3.1%)      32200    com.apple.bluetoothaudiod
+               00:00:17 (2.7%)      112578    com.xunlei.Thunder
+
+              Time:    2016-03-24 21:33:36 to 2016-03-24 21:44:36 (00:11:00)
+             Power:    -29341 mW (-40.5 %/hr)
+    Avg. Frequency:    2.624 GHz
+    Package Power::    Pkg: 17.47W, CPU 10.13W, GPU: 4.69W
+Pkg Interrupt Rate:    Total: 6959Hz   ARPT: 106Hz   IGPU: 2097Hz   IPI: 3552Hz   MacBookPro12,1: 1Hz   SMC: 1Hz   TMR: 1102Hz   XHC1: 99Hz
+   Pkg C-State Res:    Total: 12.1%   C2: 6%   C3: 2%   C6: 3%   C7: 1%   C8: 0%   C10: 0%
+ Cores C-State Res:       C3: 1%   C6: 0%   C7: 36%
+   GPU C-State Res:       RC1: 4%   RC6: 52%
+     XCPM Tier Res:       TT5: 0%   background: 1%   idle: 54%   normal: 45%
+ Display Backlight:    49.1%
+Keyboard Backlight:    74.0%
+            PSR on:    0.0%
+  Process Intrpts.:    2075901
+          CPU Time:    00:20:13 (183.8%)
+               00:17:53 (162.6%)      449626    com.google.Chrome
+               00:00:47 (7.2%)      1406729    com.apple.system
+               00:00:35 (5.3%)      25744    com.apple.WindowServer
+               00:00:20 (3.0%)      32218    com.apple.bluetoothaudiod
+               00:00:17 (2.7%)      112784    com.xunlei.Thunder
+
+              Time:    2016-03-24 21:55:36 to 2016-03-24 22:06:35 (00:10:59)
+             Power:    -25572 mW (-36.2 %/hr)
+    Avg. Frequency:    2.666 GHz
+    Package Power::    Pkg: 13.77W, CPU 7.68W, GPU: 3.67W
+Pkg Interrupt Rate:    Total: 5688Hz   ARPT: 74Hz   IGPU: 1684Hz   IPI: 2851Hz   MacBookPro12,1: 3Hz   SMC: 1Hz   TMR: 979Hz   XHC1: 97Hz
+   Pkg C-State Res:    Total: 27.4%   C2: 13%   C3: 6%   C6: 4%   C7: 5%   C8: 0%   C10: 0%
+ Cores C-State Res:       C3: 1%   C6: 0%   C7: 49%
+   GPU C-State Res:       RC1: 3%   RC6: 61%
+     XCPM Tier Res:       TT5: 0%   background: 1%   idle: 65%   normal: 35%
+ Display Backlight:    46.0%
+Keyboard Backlight:    75.0%
+            PSR on:    0.9%
+  Process Intrpts.:    1748526
+          CPU Time:    00:15:30 (141.1%)
+               00:12:59 (118.1%)      328108    com.google.Chrome
+               00:00:44 (6.7%)      1150322    com.apple.system
+               00:00:31 (4.8%)      24784    com.apple.WindowServer
+               00:00:20 (3.1%)      45932    org.niltsh.MPlayerX
+               00:00:19 (3.0%)      31793    com.apple.bluetoothaudiod
+</code></pre><h1 id="Ranked-CPU-Activity"><a href="#Ranked-CPU-Activity" class="headerlink" title="Ranked CPU Activity"></a>Ranked CPU Activity</h1><pre><code>              Time:    2016-03-24 21:30:31 to 2016-03-24 21:40:31 (00:10:00)
+             Power:    -27332 mW (-37.3 %/hr)
+    Avg. Frequency:    2.558 GHz
+    Package Power::    Pkg: 17.30W, CPU 10.10W, GPU: 4.55W
+Pkg Interrupt Rate:    Total: 6983Hz   ARPT: 109Hz   IGPU: 2097Hz   IPI: 3579Hz   MacBookPro12,1: 1Hz   SMC: 1Hz   TMR: 1096Hz   XHC1: 99Hz
+   Pkg C-State Res:    Total: 12.0%   C2: 6%   C3: 2%   C6: 3%   C7: 1%   C8: 0%   C10: 0%
+ Cores C-State Res:       C3: 1%   C6: 0%   C7: 36%
+   GPU C-State Res:       RC1: 4%   RC6: 52%
+     XCPM Tier Res:       TT5: 0%   background: 1%   idle: 54%   normal: 45%
+  Process Intrpts.:    1892484
+          CPU Time:    00:18:23 (183.8%)
+               00:16:16 (162.6%)      409478    com.google.Chrome
+               00:00:43 (7.2%)      1282825    com.apple.system
+               00:00:31 (5.3%)      23357    com.apple.WindowServer
+               00:00:18 (3.0%)      29320    com.apple.bluetoothaudiod
+               00:00:16 (2.7%)      102709    com.xunlei.Thunder
+
+              Time:    2016-03-24 21:40:31 to 2016-03-24 21:50:32 (00:10:00)
+             Power:    -30102 mW (-42.0 %/hr)
+    Package Power::    Pkg: 17.75W, CPU 10.17W, GPU: 4.92W
+Pkg Interrupt Rate:    Total: 6919Hz   ARPT: 101Hz   IGPU: 2097Hz   IPI: 3506Hz   MacBookPro12,1: 2Hz   SMC: 1Hz   TMR: 1113Hz   XHC1: 99Hz
+   Pkg C-State Res:    Total: 12.1%   C2: 6%   C3: 2%   C6: 2%   C7: 2%   C8: 0%   C10: 0%
+ Cores C-State Res:       C3: 1%   C6: 0%   C7: 36%
+   GPU C-State Res:       RC1: 4%   RC6: 52%
+     XCPM Tier Res:       TT5: 0%   background: 1%   idle: 54%   normal: 45%
+  Process Intrpts.:    1880451
+          CPU Time:    00:18:23 (183.7%)
+               00:16:16 (162.6%)      408019    com.google.Chrome
+               00:00:42 (7.2%)      1273658    com.apple.system
+               00:00:32 (5.4%)      23512    com.apple.WindowServer
+               00:00:18 (3.0%)      29273    com.apple.bluetoothaudiod
+               00:00:16 (2.7%)      102358    com.xunlei.Thunder
+
+              Time:    2016-03-24 21:50:32 to 2016-03-24 22:00:32 (00:10:00)
+             Power:    -28025 mW (-39.6 %/hr)
+    Package Power::    Pkg: 17.79W, CPU 10.14W, GPU: 4.99W
+Pkg Interrupt Rate:    Total: 6844Hz   ARPT: 95Hz   IGPU: 2092Hz   IPI: 3447Hz   MacBookPro12,1: 1Hz   SMC: 1Hz   TMR: 1109Hz   XHC1: 99Hz
+   Pkg C-State Res:    Total: 12.2%   C2: 6%   C3: 2%   C6: 2%   C7: 2%   C8: 0%   C10: 0%
+ Cores C-State Res:       C3: 1%   C6: 0%   C7: 36%
+   GPU C-State Res:       RC1: 4%   RC6: 52%
+     XCPM Tier Res:       TT5: 0%   background: 1%   idle: 54%   normal: 45%
+  Process Intrpts.:    1874886
+          CPU Time:    00:18:18 (183.0%)
+               00:16:14 (162.4%)      408861    com.google.Chrome
+               00:00:42 (7.0%)      1268502    com.apple.system
+               00:00:33 (5.5%)      23266    com.apple.WindowServer
+               00:00:18 (3.1%)      29301    com.apple.bluetoothaudiod
+               00:00:16 (2.7%)      102423    com.xunlei.Thunder
+</code></pre><h1 id="Devices-Dashboard"><a href="#Devices-Dashboard" class="headerlink" title="Devices Dashboard"></a>Devices Dashboard</h1><pre><code> Display Backlight:    50.7%
+Keyboard Backlight:    21.9%
+            PSR on:    2.9%
+
+   Builtin Devices:    
+             Wi-Fi:    99.9%
+
+  External Devices:    
+</code></pre><p> Unknown External Display:    65.8%<br>      DisplayPort Display:    5.0%<br>                      USB:    90.3%</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CPU-Summary"><span class="toc-number">1.</span> <span class="toc-text">CPU Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Thermal-Summary"><span class="toc-number">2.</span> <span class="toc-text">Thermal Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Fan-Summary"><span class="toc-number">3.</span> <span class="toc-text">Fan Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#I-O-Summary"><span class="toc-number">4.</span> <span class="toc-text">I/O Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-I-O-Activity"><span class="toc-number">5.</span> <span class="toc-text">Ranked I/O Activity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Airport-Summary"><span class="toc-number">6.</span> <span class="toc-text">Airport Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory-Summary"><span class="toc-number">7.</span> <span class="toc-text">Memory Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-Memory-Activity"><span class="toc-number">8.</span> <span class="toc-text">Ranked Memory Activity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory-Pressure-Summary"><span class="toc-number">9.</span> <span class="toc-text">Memory Pressure Summary</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Apps-amp-Daemons-grouped-by-coalition"><span class="toc-number">10.</span> <span class="toc-text">Apps & Daemons (grouped by coalition)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-Battery-Usage"><span class="toc-number">11.</span> <span class="toc-text">Ranked Battery Usage</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranked-CPU-Activity"><span class="toc-number">12.</span> <span class="toc-text">Ranked CPU Activity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Devices-Dashboard"><span class="toc-number">13.</span> <span class="toc-text">Devices Dashboard</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2016/03/25/system-stat/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2016/03/25/system-stat/&text=WOW MY MACHINE SUMMARY ."><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2016/03/25/system-stat/&is_video=false&description=WOW MY MACHINE SUMMARY ."><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=WOW MY MACHINE SUMMARY .&body=Check out this article: http://xyhp915.github.io/2016/03/25/system-stat/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2016/03/25/system-stat/&title=WOW MY MACHINE SUMMARY ."><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2016/03/25/system-stat/&name=WOW MY MACHINE SUMMARY .&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Charlie
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

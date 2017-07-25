@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="百度：Tangram基本上就是个百度版jQuery，2.0版本使用链式API，更像了。配套的还有UI库Magic和模版引擎BaiduTemplate（和ejs很像） 腾讯：JX理念在介绍里面写的很详细，代码清晰，注释丰富，可读性很好，但只有文档没有实例。比较传统的大块头框架，本质上来说还是一堆工具方法和对象的堆积，提供了很基本的模块化的开发方式，但没有模块间的依赖关系支持。 阿里：Arale基于s">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Internet company introduction to the front end of the framework in China">
+<meta property="og:url" content="http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/index.html">
+<meta property="og:site_name" content="Charlie">
+<meta property="og:description" content="百度：Tangram基本上就是个百度版jQuery，2.0版本使用链式API，更像了。配套的还有UI库Magic和模版引擎BaiduTemplate（和ejs很像） 腾讯：JX理念在介绍里面写的很详细，代码清晰，注释丰富，可读性很好，但只有文档没有实例。比较传统的大块头框架，本质上来说还是一堆工具方法和对象的堆积，提供了很基本的模块化的开发方式，但没有模块间的依赖关系支持。 阿里：Arale基于s">
+<meta property="og:updated_time" content="2017-07-25T03:44:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Internet company introduction to the front end of the framework in China">
+<meta name="twitter:description" content="百度：Tangram基本上就是个百度版jQuery，2.0版本使用链式API，更像了。配套的还有UI库Magic和模版引擎BaiduTemplate（和ejs很像） 腾讯：JX理念在介绍里面写的很详细，代码清晰，注释丰富，可读性很好，但只有文档没有实例。比较传统的大块头框架，本质上来说还是一堆工具方法和对象的堆积，提供了很基本的模块化的开发方式，但没有模块间的依赖关系支持。 阿里：Arale基于s">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>The Internet company introduction to the front end of the framework in China</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2013/08/29/the-biggest-challenge-to-being-a-software-developer/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2013/08/28/skillful-vertical-center-in-css/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&text=The Internet company introduction to the front end of the framework in China"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&is_video=false&description=The Internet company introduction to the front end of the framework in China"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The Internet company introduction to the front end of the framework in China&body=Check out this article: http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&name=The Internet company introduction to the front end of the framework in China&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#百度：Tangram"><span class="toc-number">1.</span> <span class="toc-text">百度：Tangram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#腾讯：JX"><span class="toc-number">2.</span> <span class="toc-text">腾讯：JX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#阿里：Arale"><span class="toc-number">3.</span> <span class="toc-text">阿里：Arale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#豆瓣：OzJS"><span class="toc-number">4.</span> <span class="toc-text">豆瓣：OzJS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网易：NEJ"><span class="toc-number">5.</span> <span class="toc-text">网易：NEJ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新浪：STK（未开源）"><span class="toc-number">6.</span> <span class="toc-text">新浪：STK（未开源）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人人：XN（未开源）"><span class="toc-number">7.</span> <span class="toc-text">人人：XN（未开源）</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        The Internet company introduction to the front end of the framework in China
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Charlie</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2013-08-27T16:00:00.000Z" itemprop="datePublished">2013-08-28</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/javascript/">javascript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="百度：Tangram"><a href="#百度：Tangram" class="headerlink" title="百度：Tangram"></a>百度：<a href="http://tangram.baidu.com/" target="_blank" rel="external">Tangram</a></h3><p>基本上就是个百度版jQuery，2.0版本使用链式API，更像了。<br>配套的还有UI库Magic和模版引擎BaiduTemplate（和ejs很像）</p>
+<h3 id="腾讯：JX"><a href="#腾讯：JX" class="headerlink" title="腾讯：JX"></a>腾讯：<a href="http://alloyteam.github.com/JX/" target="_blank" rel="external">JX</a></h3><p>理念在介绍里面写的很详细，代码清晰，注释丰富，可读性很好，但只有文档没有实例。<br>比较传统的大块头框架，本质上来说还是一堆工具方法和对象的堆积，提供了很基本的模块化的开发方式，但没有模块间的依赖关系支持。</p>
+<h3 id="阿里：Arale"><a href="#阿里：Arale" class="headerlink" title="阿里：Arale"></a>阿里：<a href="http://aralejs.org/" target="_blank" rel="external">Arale</a></h3><p>基于sea.js，提供基于CMD的较成熟的模块依赖管理和文件加载，同时提供包管理/打包工具spm。<br>提供基础模块如class, event, widget等等，也有常用工具模块和ui组件。解耦做的较好。比较注重开放和易用性，鼓励使用和开发第三方模块。<br>阿里以前有一个类YUI的KISSY，Arale则是采用了全新的架构思想。文档正在迅速完善中。<br>核心人物：<a href="http://weibo.com/lifesinger" target="_blank" rel="external">@玉伯也叫射雕</a>。</p>
+<h3 id="豆瓣：OzJS"><a href="#豆瓣：OzJS" class="headerlink" title="豆瓣：OzJS"></a>豆瓣：<a href="http://ozjs.org/" target="_blank" rel="external">OzJS</a></h3><p>和Arale有些类似，同样提供一个模块依赖管理的微内核，基于此来构建一套模块化的框架。兼容CMD, AMD和基本的闭包函数模块。<br>提供预处理/打包工具ozma，以及一系列常用模块，比如语言增强，事件系统，url解析，dom处理，动画等等。<br>前身是豆瓣开发阿尔法城的时候使用的框架，现在还在加强通用性的过程中，一些模块还在开发，文档也还不是很完整，但在解耦和开放性上做的不错。<br>核心人物：<a href="http://weibo.com/dexteryy" target="_blank" rel="external">@dexteryy</a>。</p>
+<h3 id="网易：NEJ"><a href="#网易：NEJ" class="headerlink" title="网易：NEJ"></a>网易：<a href="http://nej.netease.com/" target="_blank" rel="external">NEJ</a></h3><p>很大很全，功能很多，也提供打包工具，而且针对不同的浏览器内核进行了适配。<br>但不得不吐槽的是NEJ是国内这些开源框架里最不友好的一个，因为它信奉“约定优于配置”，对使用者施加了太多的约束。一旦使用NEJ，你就必须跟着它所规定的一切来。作为一个公司内部的项目，对代码风格规范有严格的要求，无可指摘，但作为一个开源项目，这就成为了一个巨大的劣势，因为学习曲线陡峭，采用成本高昂，一旦使用就被套牢在这个系统里，我很难想象会有其他公司采用NEJ来做项目。用的人少了，社区贡献也就少了，而这开源的意义也就仅限于让人参考而已。从某种程度上来说，NEJ看似开源，却是一个封闭的系统，和Arale形成鲜明反差。</p>
+<h3 id="新浪：STK（未开源）"><a href="#新浪：STK（未开源）" class="headerlink" title="新浪：STK（未开源）"></a>新浪：STK（未开源）</h3><p>在STK这个namespace下定义了reigister方法用来添加新的模块，但每个模块基本上就是一个闭包函数，没有依赖关系支持。和腾讯的JX相似，但更简单。</p>
+<h3 id="人人：XN（未开源）"><a href="#人人：XN（未开源）" class="headerlink" title="人人：XN（未开源）"></a>人人：XN（未开源）</h3><p>从源码可知用了Sizzle作为CSS选择器引擎，Mustache作为模版渲染引擎。有一个似乎是自家开发的CMD包依赖管理系统。整体的代码风格略显杂乱。</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#百度：Tangram"><span class="toc-number">1.</span> <span class="toc-text">百度：Tangram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#腾讯：JX"><span class="toc-number">2.</span> <span class="toc-text">腾讯：JX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#阿里：Arale"><span class="toc-number">3.</span> <span class="toc-text">阿里：Arale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#豆瓣：OzJS"><span class="toc-number">4.</span> <span class="toc-text">豆瓣：OzJS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网易：NEJ"><span class="toc-number">5.</span> <span class="toc-text">网易：NEJ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新浪：STK（未开源）"><span class="toc-number">6.</span> <span class="toc-text">新浪：STK（未开源）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#人人：XN（未开源）"><span class="toc-number">7.</span> <span class="toc-text">人人：XN（未开源）</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&text=The Internet company introduction to the front end of the framework in China"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&is_video=false&description=The Internet company introduction to the front end of the framework in China"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The Internet company introduction to the front end of the framework in China&body=Check out this article: http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&title=The Internet company introduction to the front end of the framework in China"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2013/08/28/the-front-end-of-the-framework-in-china/&name=The Internet company introduction to the front end of the framework in China&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Charlie
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

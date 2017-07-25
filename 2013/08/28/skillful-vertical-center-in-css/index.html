@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Updating...">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Skillful Vertical Center in CSS(code snippet)">
+<meta property="og:url" content="http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/index.html">
+<meta property="og:site_name" content="Charlie">
+<meta property="og:description" content="Updating...">
+<meta property="og:image" content="http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/xxx.jpg">
+<meta property="og:image" content="http://placehold.it/200x200">
+<meta property="og:image" content="http://pics.taobao.com/bao/album/promotion/taoscars_180x95_071112_sr.jpg">
+<meta property="og:updated_time" content="2017-07-25T03:48:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Skillful Vertical Center in CSS(code snippet)">
+<meta name="twitter:description" content="Updating...">
+<meta name="twitter:image" content="http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/xxx.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Skillful Vertical Center in CSS(code snippet)</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2013/08/28/the-front-end-of-the-framework-in-china/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2013/08/09/make-childnode-had-the-same-height-by-parentnode/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&text=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&is_video=false&description=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Skillful Vertical Center in CSS(code snippet)&body=Check out this article: http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&name=Skillful Vertical Center in CSS(code snippet)&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Skillful Vertical Center in CSS(code snippet)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Charlie</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2013-08-27T16:00:00.000Z" itemprop="datePublished">2013-08-28</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/css/">css</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>Though there is a CSS property vertical-align, it doesn’t work like attribute valign in HTML tables. CSS property vertical-align doesn’t seem to be able to solely solve this problem . <br><br>Yeah . CSS Magic ! Nothing can’t do but unexpected :)</p>
+</blockquote>
+<p>###1、CSS expression</p>
+<style type="text/css">  
+      .container{  
+        /*IE8 & the standard browser */
+        display: table-cell;
+        vertical-align:middle; 
+        width:500px;
+        height:500px;  
+        background:#B9D6FF;  
+        border: 1px solid #CCC;  
+      }  
+      .container img{  
+        display:block;/*Let it to be box model*/
+        margin:0 auto;  
+        text-align:center;
+        margin-top:expression((500 - this.height )/2);/*Let IE567 vertical alignment*/
+      }  
+</style>  
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;  
+  &lt;img src=&quot;xxx.jpg&quot; /&gt;  
+&lt;/div&gt;  
+</code></pre><p>###2、Positioning method</p>
+<style type="text/css">
+      div {
+        /*IE8 & the standard browser */
+        display:table-cell;
+        vertical-align:middle;
+        overflow:hidden;
+        position:relative;
+        text-align:center;
+        width:500px;
+        height:500px;
+        border:1px solid #ccc;
+        background:#B9D6FF;
+      }
+      div p {
+        +position:absolute;
+        top:50%
+      }
+      img {/*relative parent size offset*/
+        +position:relative;
+        top:-50%;
+        left:-50%;
+      }
+
+</style>
+    <div class="container">
+      <p>
+        <img src="xxx.jpg">
+      </p>
+    </div>
+
+
+
+###3、Button method ??!!
+
+
+
+<style>
+    button {
+     width: 400px;
+     height: 400px;     
+     background: none;
+     border: 1px solid #ccc;    
+    }
+</style>
+
+<button><br>    <img src="http://placehold.it/200x200"><br></button>
+
+
+
+<p>###4、<a href="http://www.taobao.com" target="_blank" rel="external">Taobao.com</a> method</p>
+<style>
+.box {
+        /*非IE的主流浏览器识别的垂直居中的方法*/
+        display: table-cell;
+        vertical-align:middle;
+
+        /*设置水平居中*/
+        text-align:center;
+
+        /* 针对IE的Hack */
+        *display: block;
+        *font-size: 175px;/*约为高度的0.873，200*0.873 约为175*/
+        *font-family:Arial;/*防止非utf-8引起的hack失效问题，如gbk编码*/
+
+        width:200px;
+        height:200px;
+        border: 1px solid #eee;
+}
+.box img {
+        /*设置图片垂直居中*/
+        vertical-align:middle;
+}
+</style>
+
+<div class="box"><br>        <img src="http://pics.taobao.com/bao/album/promotion/taoscars_180x95_071112_sr.jpg"><br></div>
+
+
+<p>###5、Not Image ? No Problem !</p>
+<style type="text/css">
+    #outer {height: 400px; overflow: hidden; position: relative; width: 100%;}
+    #outer[id] {display: table; position: static;}
+
+    #middle {position: absolute; top: 50%; width: 100%; text-align: center;} /* for explorer only*/
+    #middle[id] {display: table-cell; vertical-align: middle; position: static;}
+
+    #inner {position: relative; top: -50%; text-align: left;} /* for explorer only */
+    #inner {width: 200px; margin-left: auto; margin-right: auto;} /* for all browsers*/
+    /* optional: #inner[id] {position: static;} */
+</style>
+
+<div id="outer"><br>    <div id="middle"><br>        <div id="inner" class="greenBorder"><br>            any text<br><br>            <b>any height, set width,</b><br><br>            any content, for example generated from DB<br><br>            everything is both vertically and horizontally centered<br><br>        </div><br>    </div><br></div>
+
+
+
+<blockquote>
+<p>That’s all . Let’s have a cup of tea ~ :)</p>
+</blockquote>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&text=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&is_video=false&description=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Skillful Vertical Center in CSS(code snippet)&body=Check out this article: http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&title=Skillful Vertical Center in CSS(code snippet)"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://xyhp915.github.io/2013/08/28/skillful-vertical-center-in-css/&name=Skillful Vertical Center in CSS(code snippet)&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Charlie
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/xyhp915">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

@@ -338,22 +338,22 @@
   letter-spacing: normal;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: #eee;
+  color: #222;
   display: block;
 }
 .content h3 {
   font-size: 0.9rem;
   font-weight: bold;
   text-decoration: underline;
-  color: #eee;
+  color: #222;
 }
 .content h4,
 .content h5,
 .content h6 {
   font-size: 0.9rem;
   font-weight: normal;
-  color: #ccc;
-  border-bottom: 1px dashed #ccc;
+  color: #555;
+  border-bottom: 1px dashed #555;
   display: inline;
   text-decoration: none;
 }
@@ -365,7 +365,7 @@
   margin-bottom: 0.5rem;
 }
 .content hr {
-  border: 1px dashed #ccc;
+  border: 1px dashed #555;
 }
 .content strong {
   font-weight: bold;
@@ -421,7 +421,7 @@
 .content th {
   font-size: 13px;
   font-weight: bold;
-  color: #eee;
+  color: #222;
   border-bottom: 1px dashed #ccc;
   padding: 8px 8px;
 }
@@ -436,13 +436,13 @@
 }
 html {
   height: 100%;
-  border-top: 2px solid #c9cacc;
+  border-top: 2px solid #444;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
-  color: #c9cacc;
-  background-color: #1d1f21;
+  color: #444;
+  background-color: #eee;
   font-size: 14px;
   font-family: "Menlo", "Meslo LG", monospace;
   font-weight: 400;
@@ -472,11 +472,11 @@ body {
 }
 .content a {
   text-decoration: none;
-  color: #c9cacc;
+  color: #444;
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: 100% 6px;
-  background-image: linear-gradient(transparent, transparent 5px, #c9cacc 5px, #c9cacc);
+  background-image: linear-gradient(transparent, transparent 5px, #444 5px, #444);
 }
 .content a:hover {
   background-image: linear-gradient(transparent, transparent 4px, #d480aa 4px, #d480aa);
@@ -554,7 +554,7 @@ body {
   line-height: 2rem;
   font-style: normal;
   font-weight: 700;
-  color: #c9cacc;
+  color: #444;
   margin-top: 0;
   margin-bottom: 0;
   -moz-osx-font-smoothing: grayscale;
@@ -778,7 +778,7 @@ body {
 }
 #header-post #toc .toc-level-2 {
   font-size: 0.8rem;
-  color: #c9cacc;
+  color: #444;
 }
 #header-post #toc .toc-level-2:before {
   content: "#";
@@ -850,7 +850,7 @@ body {
   transition: opacity 0.2s;
   width: 100%;
   z-index: 5000000;
-  background: #212326;
+  background: #eee;
   border-top: 1px solid #666673;
 }
 #footer-post a {
@@ -950,7 +950,7 @@ body {
 }
 #footer-post #toc-footer .toc-level-2 {
   font-size: 0.8rem;
-  color: #c9cacc;
+  color: #444;
 }
 #footer-post #toc-footer .toc-level-2:before {
   content: "#";
@@ -1040,7 +1040,7 @@ article header .meta {
   margin-bottom: 1rem;
 }
 article header .meta * {
-  color: #ccc;
+  color: #555;
   font-size: 0.85rem;
 }
 article header .author {
@@ -1085,17 +1085,19 @@ article .content .video-container embed {
 }
 article .content blockquote {
   background: inherit;
-  color: #ccffb6;
   border-left: 0px solid #ccc;
   margin: 1rem 10px;
   padding: 0.5em 10px;
   quotes: "\201C" "\201D" "\2018" "\2019";
+  font-weight: bold;
+  font-style: italic;
+  color: #000;
 }
 article .content blockquote p {
   margin: 0;
 }
 article .content blockquote:before {
-  color: #ccffb6;
+  color: #000;
   content: "\201C";
   font-size: 2em;
   line-height: 0.1em;
@@ -1246,11 +1248,11 @@ article .content .caption {
   width: 100%;
 }
 .pagination .page-number {
-  color: #c9cacc;
+  color: #444;
   font-size: 0.8rem;
 }
 .pagination a {
-  color: #c9cacc;
+  color: #444;
   padding: 4px 6px;
   text-decoration: none;
   border-radius: 5px;
@@ -1261,7 +1263,7 @@ article .content .caption {
   background-image: none;
 }
 .pagination a:hover:not(.active) {
-  color: #eee;
+  color: #222;
 }
 .highlight {
   color: #d1d9e1;
@@ -1350,7 +1352,7 @@ pre code {
 }
 .highlight {
   font-family: "Menlo", "Meslo LG", monospace;
-  background: #212326;
+  background: #181818;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   padding: 10px 15px;
